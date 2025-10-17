@@ -7,3 +7,5 @@ InventoryService:
 	- Overview: [[Overview Inventory Services]]
 NotificationService: 
 	- Overview: [[Overview NotificationService]]
+PaymantAdapter:
+	- Overview: [[Overview Payment Adapter]]
