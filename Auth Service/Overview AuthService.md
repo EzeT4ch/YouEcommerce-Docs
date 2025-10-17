@@ -7,17 +7,17 @@ Servicio encargado de la identidad, autenticación y autorización. Es el provee
 
 ## ✅ Funcionalidades clave
 
-| Funcionalidad               | Descripción                                           | Priorización |
-|----------------------------|-------------------------------------------------------|--------------|
-| Registro de usuario        | Alta de usuario con email y contraseña                | Must-have    |
-| Inicio de sesión (Login)   | JWT + refresh token (si aplica)                       | Must-have    |
-| Gestión de sesiones        | Validación de token activo                            | Must-have    |
-| Multi-tenant básico        | Asociación de usuarios a tenants (tiendas/clientes)   | Must-have    |
-| Recuperación de contraseña | Token vía email (mock en etapa inicial)               | Should-have  |
-| Roles y permisos           | `admin`, `client`, etc.                               | Should-have  |
-| Gestión de usuarios        | CRUD de usuarios por tenant                           | Should-have  |
-| Auditoría / Logs           | Registro de actividad                                 | Could-have   |
-| OAuth2 / Social login      | Google, etc.                                          | Won’t-have   |
+| Funcionalidad              | Descripción                                         | Priorización |
+| -------------------------- | --------------------------------------------------- | ------------ |
+| Registro de usuario        | Alta de usuario con email y contraseña              | Must-have    |
+| Inicio de sesión (Login)   | JWT + refresh token (si aplica)                     | Must-have    |
+| Gestión de sesiones        | Validación de token activo                          | Must-have    |
+| Multi-tenant básico        | Asociación de usuarios a tenants (tiendas/clientes) | Must-have    |
+| Recuperación de contraseña | Token vía email (mock en etapa inicial)             | Should-have  |
+| Roles y permisos           | `admin`, `client`, etc.                             | Should-have  |
+| Gestión de usuarios        | CRUD de usuarios por tenant                         | Should-have  |
+| Auditoría / Logs           | Registro de actividad                               | Could-have   |
+| OAuth2 / Social login      | Google, etc.                                        | Won’t-have   |
 
 ---
 
@@ -75,20 +75,20 @@ Servicio encargado de la identidad, autenticación y autorización. Es el provee
 
 ## 🌐 Endpoints
 
-| Método | Ruta                     | Descripción                                        |
-| ------ | ------------------------ | -------------------------------------------------- |
-| POST   | `/auth/register`         | Registro de usuario y tenant                       |
-| POST   | `/auth/login`            | Inicio de sesión                                   |
-| GET    | `/auth/me`               | Información del usuario autenticado                |
-| POST   | `/auth/logout`           | Invalida el refresh token (si se usa)              |
-| POST   | `/auth/forgot-password`  | Inicio de recuperación de contraseña               |
-| POST   | `/auth/reset-password`   | Finalización de recuperación                       |
-| GET    | `/auth/users`            | Listar usuarios del tenant actual                  |
-| POST   | `/auth/users`            | Crear usuario adicional (multiusuario)             |
-| DELETE | `/auth/users/{id}`       | Eliminar usuario del tenant                        |
-| POST   | `/auth/validate`         | Validar token JWT y extraer claims                 |
-| GET    | `/health`                | Health check                                       |
-| GET    | `/.well-known/jwks.json` | **(Futuro)** Claves públicas para validación RS256 |
+| Método | Ruta                     | Descripción                                        |     |
+| ------ | ------------------------ | -------------------------------------------------- | --- |
+| POST   | `/auth/register`         | Registro de usuario y tenant                       |     |
+| POST   | `/auth/login`            | Inicio de sesión                                   |     |
+| GET    | `/auth/me`               | Información del usuario autenticado                |     |
+| POST   | `/auth/logout`           | Invalida el refresh token (si se usa)              |     |
+| POST   | `/auth/forgot-password`  | Inicio de recuperación de contraseña               |     |
+| POST   | `/auth/reset-password`   | Finalización de recuperación                       |     |
+| GET    | `/auth/users`            | Listar usuarios del tenant actual                  |     |
+| POST   | `/auth/users`            | Crear usuario adicional (multiusuario)             |     |
+| DELETE | `/auth/users/{id}`       | Eliminar usuario del tenant                        |     |
+| POST   | `/auth/validate`         | Validar token JWT y extraer claims                 |     |
+| GET    | `/health`                | Health check                                       |     |
+| GET    | `/.well-known/jwks.json` | **(Futuro)** Claves públicas para validación RS256 |     |
 **Notas**  
 - Todos los endpoints (salvo `register`, `login`, `forgot/reset`, `health`, `jwks`) requieren `Authorization: Bearer <JWT>`.
 

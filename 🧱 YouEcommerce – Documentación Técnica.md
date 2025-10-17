@@ -162,6 +162,7 @@ package "YouEcommerce Platform" {
 | Observabilidad | Serilog + App Insights        |
 | Arquitectura   | Clean Architecture + DDD      |
 
+
 ✨ Créditos
 Arquitectura: Santiago Sotelo y Ezequiel Benitez
 
